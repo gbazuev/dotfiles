@@ -1,0 +1,94 @@
+[{
+    "layer": "bottom",
+    "position": "top",
+    "height": 27,
+    "spacing": 4,
+    "modules-left": [ "clock#3", "clock#2", "clock#1", "tray" ],
+    "modules-center": [ ],
+    "modules-right": [ "network", "wireplumber", "temperature", "memory", "cpu", "battery", "hyprland/language" ],
+
+     "battery": {
+        "states": {
+             "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+
+        "tooltip": false,
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+
+    "clock#1": { 
+        "format": "{:%H:%M}",
+        //"interval": 60,
+        //"tooltip": true,
+        //"tooltip-format": "{:%A, %d %B %Y}"
+    },
+
+    "clock#2": {
+        "format": "{:%A}"
+    },
+
+    "clock#3": {
+        "format": "{:%d %B %Y}"
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 10
+    },
+
+    "hyprland/language": {
+        "format": "{short}",
+        "keyboard-name": "at-translated-set-2-keyboard"
+    },
+
+    "wireplumber": {
+        "interval": 60,
+        "scroll-step": 5, // %, can be a float
+        "max-volume": 100.0,
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}% ",
+        "format-bluetooth-muted": "  {icon}",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "default": ["", " ", " "]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "network": {
+        "format-wifi": "{ifname} {ipaddr}/{cidr} ({signalStrength}%)  ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ",
+        "format-linked": "{ifname} (No IP)  ",
+        "format-disconnected": "Disconnected ⚠",
+        "tooltip": true,
+        "tooltip-format": "{essid}"
+    },
+
+    "temperature": {
+      "format": "{icon} {temperatureC}°C",
+      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+      "critical-threshold": 80,
+      "format-icons": ["", "", ""]
+    },
+
+    "memory": {
+      "format": " {}%",
+      "tooltip": "false"
+    },
+
+    "cpu": {
+      "format": " {usage}%",
+      "tooltip": "false"
+    },
+}]
