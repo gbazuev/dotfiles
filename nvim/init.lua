@@ -1,6 +1,8 @@
 require("plugins")
 require("options")
-require("colorscheme")
+
+require("colorscheme.onedark")
+require("colorscheme.gruvbox")
 
 require("config.nvim-tree")
 require("config.lualine")
@@ -13,3 +15,4 @@ require("config.treesitter")
 require("config.which-key")
 require("config.kind")
 require("config.autopairs")
+require("config.themery")

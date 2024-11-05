@@ -88,8 +88,11 @@ return packer.startup(function(use)
         end,
     })
 
+    use "zaldih/themery.nvim"
+
 	--THEMES
 	use "doums/darcula"
+    use "navarasu/onedark.nvim"
     use "ellisonleao/gruvbox.nvim"
 
 	if PACKER_BOOTSTRAP then

@@ -53,7 +53,7 @@
         "max-volume": 100.0,
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon} {volume}% ",
-        "format-bluetooth-muted": "  {icon}",
+        "format-bluetooth-muted": "  {icon} ",
         "format-muted": " ",
         "format-icons": {
             "headphone": " ",
@@ -70,7 +70,7 @@
         "format-wifi": "{ifname} {ipaddr}/{cidr} ({signalStrength}%)  ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr}  ",
         "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "Disconnected",
         "tooltip": true,
         "tooltip-format": "{essid}"
     },
