@@ -52,26 +52,24 @@ return packer.startup(function(use)
         requires = { "nvim-web-devicons" },
     })                                          -- beautiful and user-friendly bottom bar
 
-    use "nvim-tree/nvim-web-devicons"           -- beautiful file (and more) icons (nerd (patched) font required
+    use "nvim-tree/nvim-web-devicons"           -- beautiful file (and more) icons. Nerd (patched) font required
+    use "onsails/lspkind.nvim"                  -- Icons (function, var etc.) for autocompletion
 
-    use "williamboman/mason.nvim"
-    use "williamboman/mason-lspconfig.nvim"
-    use "neovim/nvim-lspconfig"                 -- For easy configuration    
-    use "hrsh7th/cmp-nvim-lsp"                  -- 
-    use "jose-elias-alvarez/null-ls.nvim"       -- special null-language-server, if we didn't have any language servers installed
-
-    use "onsails/lspkind.nvim"                  -- VsCode-like icons for autocompletion
-    use "hrsh7th/nvim-cmp"
+    use "williamboman/mason.nvim"               -- Package manager for LSP, DAP, linters and formatters
+    use "williamboman/mason-lspconfig.nvim"     -- Connector between mason and lspconfig
+    use "neovim/nvim-lspconfig"                 -- Quickstart configs for LSP    
+    use "hrsh7th/cmp-nvim-lsp"                  -- Source for neovim builtin LSP client
+    use "jose-elias-alvarez/null-ls.nvim"       -- Injector for LSP diagnostics, code actions and boilerplate
+    use "hrsh7th/nvim-cmp"                      -- A completion engine (root of all Neovim Autocompletion) 
     use "hrsh7th/cmp-buffer"                    -- source for text in buffer
     use "hrsh7th/cmp-path"                      -- source for file system path   
     use "L3MON4D3/LuaSnip"                      -- snippet engine
     use "saadparwaiz1/cmp_luasnip"              -- for autocompletion
+
     use "rcarriga/nvim-notify"                  -- user-friendly notification system (errors, warnings etc.)
     use "romgrk/barbar.nvim"                    -- convenient top panel with files
     use "nvim-lua/plenary.nvim"                 -- convenient functions that contains boilerplate lua code (for Telescope)
-
     use "folke/which-key.nvim"                  -- hints fo using keyboard keys
-
     use "windwp/nvim-autopairs"                 -- brackets and other pairs completion
 
     use({
@@ -88,7 +86,7 @@ return packer.startup(function(use)
         end,
     })
 
-    use "zaldih/themery.nvim"
+    use "zaldih/themery.nvim"                   -- Theme picker
 
 	--THEMES
 	use "doums/darcula"
